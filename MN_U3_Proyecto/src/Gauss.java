@@ -22,7 +22,7 @@ public class Gauss extends javax.swing.JFrame {
      */
     public Gauss() {
         initComponents();
-        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        this.setLocationRelativeTo(null);
         model=new DefaultTableModel();
         model.addColumn("x1");
         model.addColumn("x2");
@@ -66,6 +66,8 @@ public class Gauss extends javax.swing.JFrame {
         btnMP = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Gauss Normal");
+        setResizable(false);
 
         tabla1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -78,6 +80,7 @@ public class Gauss extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tabla1.setEnabled(false);
         jScrollPane1.setViewportView(tabla1);
 
         tabla2.setModel(new javax.swing.table.DefaultTableModel(
@@ -91,6 +94,7 @@ public class Gauss extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tabla2.setEnabled(false);
         jScrollPane2.setViewportView(tabla2);
 
         tabla3.setModel(new javax.swing.table.DefaultTableModel(
@@ -104,6 +108,7 @@ public class Gauss extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tabla3.setEnabled(false);
         jScrollPane3.setViewportView(tabla3);
 
         x1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
